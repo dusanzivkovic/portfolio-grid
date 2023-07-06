@@ -1,9 +1,28 @@
-body {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Quicksand', sans-serif;
     color: #595959;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 1rem 0;
+}
+
+li {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+li:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 img {
@@ -21,10 +40,32 @@ img:hover {
 .portfolio {
     max-width: 72rem;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem;
+}
+
+.gallery-item.show{
+	animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.gallery-item.hide{
+	display: none;
+}
+
+.active {
+    font-weight: bold;
 }
